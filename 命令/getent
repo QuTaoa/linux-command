@@ -1,0 +1,22 @@
+getent命令来自于英文词组“get entries”的缩写，其功能是用于查看系统数据库中的记录信息。即便这些数据库不是本地的，类似于LDAP或者NIS也可以使用getent命令进行查看。
+
+语法格式：getent [参数]
+
+常用参数：
+
+-s	要使用的服务配置
+-help	给出该系统求助列表
+-usage	给出简要的用法信息
+-V	打印程序版本号
+
+参考实例
+
+查看本地的主机文件（/etc/hosts）中包含的指定域名信息：
+
+[root@linuxcool ~]# getent hosts linuxcool.com
+182.149.160.47  linuxcool.com
+
+查看本地的密码文件（/etc/passwd）中包含的指定用户信息：
+
+[root@linuxcool ~]# getent passwd linuxprobe
+linuxprobe:x:1000:1000:linuxprobe:/home/linuxprobe:/bin/bash
